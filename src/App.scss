@@ -1,8 +1,353 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: aquamarine;
+body {
+  font-family: "Montserrat", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+.app__container {
+  min-width: 100%;
+  max-width: 1440px;
+}
+
+.home__jumbotron__bg__wrapper {
+  height: 120vh;
+  width: 100%;
+  position: relative;
+}
+.home__jumbotron__bg__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home__jumbotron__content {
+  margin-top: 120px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home__jumbotron__content__left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  margin-top: 5rem;
+  //   margin: 2rem 0 0 2rem;
+  padding-left: 3rem;
+}
+.home__jumbotron__content__left__heading {
+  font-size: 2rem;
+  color: white;
+  width: 70%;
+}
+.home__jumbotron__content__left__para {
+  color: white;
+  margin: 1rem 0;
+  width: 70%;
+}
+.home__jumbotron__content__left__button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, #412eff, #5858ff);
+  border-radius: 10px;
+  color: white;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+.home__jumbotron__content__left__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
+}
+
+
+.home__jumbotron__content__right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.home__jumbotron__content__right img {
+  height: 620px;
+}
+
+.home__navigation__wrapper {
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 150px;
+}
+.home__navigation__logo {
+  width: 70%;
+}
+.home__navigation__logo img {
+  height: 120px;
+}
+.home__navigation__navbar {
+  width: 30%;
+}
+.home__navigation__navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.home__navigation__navbar ul li {
+  list-style: none;
+}
+.home__navigation__navbar ul li a {
+  color: white;
+  text-decoration: none;
+
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(180deg, #412eff, #5858ff);
+  border-radius: 20px;
+  color: white;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bold;
+}
+// --------------------------------Cards-Section----------------------------
+.cards__container {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+}
+.card {
+  height: 200px;
+  width: 400px;
+  box-shadow: 5px 10px 98px 24px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: all 300ms ease-in;
+}
+.card__link {
+  color: #462490;
+  display: none;
+}
+.card:hover .card__img circle,
+.card__img path {
+  stroke: #462490;
+}
+.card:hover {
+  height: 250px;
+}
+.card:hover .card__heading {
+  color: #462490;
+}
+.card:hover .card__link {
+  display: block;
+}
+.card__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+// ----------------------Text-section------------------------------------
+
+.text__section {
+  height: 100vh;
+}
+.text__section__wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.text__section__wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.text__section__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 35%;
+  justify-content: center;
+  padding-left: 3rem;
+}
+.text__section__content__heading {
+  font-size: 2rem;
+}
+.text__section__content__para {
+  margin: 1.5rem 0;
+}
+.text__section__content__button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: #740e86;
+  width: 70%;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.text__section__content__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
+}
+
+// ------------------------chat__section----------------------
+
+.chat__section {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat__section__container {
+  background-color: #480c71;
+  border-radius: 20px;
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.chat__section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  width: 70%;
+}
+.chat__section__heading {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.chat__section__para {
+  color: white;
+}
+.chat__section__button {
+  padding: 0.5rem 1.5rem;
+  background-color: #5499df;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.chat__section__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
+}
+// -----------------footer--section---------------------------
+
+.footer__section {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+.footer__section__bg {
+  height: 100%;
+  width: 100%;
+}
+.footer__section__bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.footer__section__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+}
+.footer__section__newsletter {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+.footer__section__heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.footer__section__form {
+  background-color: #e4e4e4;
+  width: fit-content;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__section__email {
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #e4e4e4;
+  width: 70%;
+}
+.footer__section__email:focus{
+  border: none;
+  outline: none;
+}
+
+.footer__section__button {
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #480c71;
+  color: white;
+  font-weight: bold;
+  width: 30%;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.footer__section__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
+}
+.footer__section__menu{
+  width: 25%;
+}
+.footer__section__list{
+  display: flex;
+  justify-content: space-between;
+}
+.footer__section__list li{
+list-style: none;
+}
+.footer__section__list li a{
+  color: white;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+}
+.footer__section__list li a:hover{
+  text-decoration: underline;
+}
+.footer__section__copyright{
+  color: white;
 }
