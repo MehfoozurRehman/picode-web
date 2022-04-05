@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 100%;
 }
 html{
   scroll-behavior: smooth;
@@ -77,7 +78,7 @@ html{
   justify-content: center;
 }
 .home__jumbotron__content__right img {
-  height: 620px;
+  height: 38.75rem;
 }
 
 .home__navigation__wrapper {
@@ -112,12 +113,16 @@ html{
   text-decoration: none;
 
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(180deg, #412eff, #5858ff);
   border-radius: 20px;
   color: white;
   width: fit-content;
   text-decoration: none;
   font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+.home__navigation__navbar ul li a:hover{
+  background: linear-gradient(180deg, #412eff, #5858ff);
+
 }
 // --------------------------------Cards-Section----------------------------
 .cards__container {
@@ -127,11 +132,12 @@ html{
   justify-content: space-evenly;
   align-items: center;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 .card {
   height: 200px;
-  width: 400px;
-  box-shadow: 5px 10px 98px 24px rgba(0, 0, 0, 0.16);
+  width: 32%;
+  box-shadow: 0px 10px 38px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -174,6 +180,7 @@ html{
 .text__section__wrapper img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .text__section__content {
   position: absolute;
@@ -184,7 +191,7 @@ html{
   height: 100%;
   width: 35%;
   justify-content: center;
-  padding-left: 3rem;
+  padding: 0 2rem;
 }
 .text__section__content__heading {
   font-size: 2rem;
@@ -315,9 +322,12 @@ html{
 }
 
 .footer__section__button {
-  padding: 1rem 2rem;
+  // padding: 1rem 2rem;
+  width: 2rem;
+  
   border-radius: 20px;
   border: none;
+  text-align: center;
   background-color: #480c71;
   color: white;
   font-weight: bold;
@@ -350,4 +360,137 @@ list-style: none;
 }
 .footer__section__copyright{
   color: white;
+}
+
+
+@media (max-width:1000px) {
+  body{
+    font-size: 87.50%;
+  }
+  .home__jumbotron__content{
+    flex-direction: column;
+    margin-top: 220px;
+  }
+  .home__jumbotron__bg__wrapper{
+    height: 150vh;
+  }
+  .home__jumbotron__content__left{
+    width: 100%;
+  }
+  .home__jumbotron__content__right {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .home__jumbotron__content__right img{
+    height: 520px;
+  }
+  .cards__container{
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  .card{
+    flex: 0 1 350px;
+  }
+  .text__section__content{
+    width: 50%;
+  }
+  .cards__container{
+    height: fit-content;
+  }
+  .text__section__wrapper img{
+    object-fit: contain;
+  }
+}
+@media (max-width:700px) {
+  // body{
+  //   font-size: 62.5%;
+  // }
+  .text__section__content__heading,
+  .home__jumbotron__content__left__heading,
+  .chat__section__heading,
+  .footer__section__heading{
+    font-size: 1.5rem;
+  }
+  .text__section__content__button,
+  .home__jumbotron__content__left__button{
+    font-size: 1rem;
+  }
+  .footer__section__menu{
+    width: 30%;
+  }
+}
+
+@media (max-width:600px) {
+  .home__navigation__logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .home__jumbotron__content{
+    margin-top: 150px;
+
+  }
+  .home__jumbotron__bg__wrapper{
+    height: 120vh;
+  }
+  .home__jumbotron__content__left{
+    margin: 0;
+    padding: 0 1rem;
+    align-items: center;
+    height: fit-content;
+  }
+  .home__jumbotron__content__right img{
+    height: 400px;
+  }
+  .home__jumbotron__content__left__heading,
+  .home__jumbotron__content__left__para{
+    width: 100%;
+  }
+  .text__section{
+    height: 30vh;
+  }
+.chat__section{
+  height: 50vh;
+}
+.chat__section__content{
+height: 100%;
+width: 100%;
+padding: 1rem;
+}
+.chat__section__para{
+  text-align: center;
+}
+
+
+
+
+
+
+  .home__navigation__wrapper{
+    flex-direction: column;
+  }
+  .text__section__wrapper{
+    height: 35vh;
+    background-color:#E4E4E4;
+  }
+  .text__section__wrapper img{
+    display: none;
+  }
+  .text__section__content{
+    width: 100%;
+  }
+  .footer__section__menu{
+    height: 30%;
+  }
+  .footer__section__list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer__section__newsletter {
+    width: 90%;
+  }
 }

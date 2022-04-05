@@ -190,7 +190,7 @@ function App() {
           <img src="src\img\text__section__bg.png" alt="bg__text__section" />
           <div className="text__section__content">
             <h2 className="text__section__content__heading">
-              Introducding Picode Landing Page
+              Introducing Picode Landing Page
             </h2>
             <div className="text__section__content__para">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
