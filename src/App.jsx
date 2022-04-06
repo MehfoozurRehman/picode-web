@@ -26,22 +26,24 @@ function App() {
             alt="bg image"
           />
         </div>
-        <div className="home__jumbotron__content">
-          <div className="home__jumbotron__content__left">
-            <h1 className="home__jumbotron__content__left__heading">
-              Introducing Picode Landing Page
-            </h1>
-            <p className="home__jumbotron__content__left__para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              nesciunt id nulla iste ab ea repudiandae tenetur accusamus
-              possimus in.
-            </p>
-            <a href="#" className="home__jumbotron__content__left__button">
-              Join as Partner
-            </a>
-          </div>
-          <div className="home__jumbotron__content__right">
-            <img src="src\img\jumbotron__mobile.png" alt="mobile" />
+        <div className="home__jumbotron__content__overlay">
+          <div className="home__jumbotron__content">
+            <div className="home__jumbotron__content__left">
+              <h1 className="home__jumbotron__content__left__heading">
+                Introducing Picode Landing Page
+              </h1>
+              <p className="home__jumbotron__content__left__para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat nesciunt id nulla iste ab ea repudiandae tenetur
+                accusamus possimus in.
+              </p>
+              <a href="#" className="home__jumbotron__content__left__button">
+                Join as Partner
+              </a>
+            </div>
+            <div className="home__jumbotron__content__right">
+              <img src="src\img\jumbotron__mobile.png" alt="mobile" />
+            </div>
           </div>
         </div>
       </div>
@@ -188,6 +190,7 @@ function App() {
       <section id="app" className="text__section">
         <div className="text__section__wrapper">
           <img src="src\img\text__section__bg.png" alt="bg__text__section" />
+          <div className="text__section__wrapper__overlay">
           <div className="text__section__content">
             <h2 className="text__section__content__heading">
               Introducing Picode Landing Page
@@ -199,6 +202,7 @@ function App() {
             <a href="" className="text__section__content__button">
               Download App
             </a>
+          </div>
           </div>
         </div>
       </section>
@@ -226,9 +230,16 @@ function App() {
               Don't miss out. Stay update
             </h2>
             <form action="" className="footer__section__form">
-              <input type="email" placeholder="Enter your email" className="footer__section__email"/>
-              <input type="submit" placeholder="Subscribe"
-              className="footer__section__button" />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="footer__section__email"
+              />
+              <input
+                type="submit"
+                placeholder="Subscribe"
+                className="footer__section__button"
+              />
             </form>
           </div>
           <nav className="footer__section__menu">

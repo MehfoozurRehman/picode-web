@@ -11,10 +11,10 @@ body {
 html{
   scroll-behavior: smooth;
 }
-.app__container {
-  min-width: 100%;
-  max-width: 1440px;
-}
+// .app__container {
+//   width: 100%;
+//   max-width: 1440px;
+// }
 
 .home__jumbotron__bg__wrapper {
   height: 120vh;
@@ -26,15 +26,30 @@ html{
   height: 100%;
   object-fit: cover;
 }
-.home__jumbotron__content {
-  margin-top: 120px;
+.home__jumbotron__content__overlay{
   display: flex;
-  height: 100%;
   justify-content: center;
-  left: 0;
+  align-items: center;
   position: absolute;
+  margin-top: 120px;
+
+  left: 0;
   top: 0;
+  height: 100%;
   width: 100%;
+
+  // background-color: rgba($color: yellow, $alpha: 0.3);
+}
+.home__jumbotron__content {
+  max-width: 1440px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2em;
+
+
 }
 .home__jumbotron__content__left {
   display: flex;
@@ -128,11 +143,17 @@ html{
 .cards__container {
   height: 85vh;
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 3rem;
   flex-wrap: wrap;
+  margin: 0 auto;
+  // background-color: rgba($color: green, $alpha: 0.3);
+  padding: 0 2rem;
+
+  
 }
 .card {
   height: 200px;
@@ -149,8 +170,7 @@ html{
   color: #462490;
   display: none;
 }
-.card:hover .card__img circle,
-.card__img path {
+.card:hover .card__img *{
   stroke: #462490;
 }
 .card:hover {
@@ -182,10 +202,23 @@ html{
   width: 100%;
   object-fit: cover;
 }
-.text__section__content {
+.text__section__wrapper__overlay{
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  justify-content: center;
+  // background-color: rgba($color: blue, $alpha: 0.3);
+
+
+
+}
+.text__section__content {
+
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -220,9 +253,12 @@ html{
 .chat__section {
   height: 80vh;
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 .chat__section__container {
   background-color: #480c71;
@@ -406,6 +442,10 @@ list-style: none;
   // body{
   //   font-size: 62.5%;
   // }
+  .home__jumbotron__wrapper{
+    height: 110vh;
+    
+  }
   .text__section__content__heading,
   .home__jumbotron__content__left__heading,
   .chat__section__heading,
@@ -428,11 +468,14 @@ list-style: none;
     justify-content: center;
   }
   .home__jumbotron__content{
-    margin-top: 150px;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    // margin-top: 150px;
 
   }
   .home__jumbotron__bg__wrapper{
-    height: 120vh;
+    height: 110vh;
   }
   .home__jumbotron__content__left{
     margin: 0;
