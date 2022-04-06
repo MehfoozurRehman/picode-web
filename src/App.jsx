@@ -1,4 +1,9 @@
 import React from "react";
+import jumbotron__bg from "./img/jumbotron__bg.png";
+import logo from "./img/logo.png";
+import footer from "./img/footer.png";
+import jumbotron__mobile from "./img/jumbotron__mobile.png";
+import text__section__bg from "./img/text__section__bg.png";
 
 function App() {
   return (
@@ -6,7 +11,7 @@ function App() {
       <div id="home" className="home__jumbotron__wrapper">
         <div className="home__navigation__wrapper">
           <div className="home__navigation__logo">
-            <img src="src\img\logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
           <nav className="home__navigation__navbar">
             <ul>
@@ -22,7 +27,7 @@ function App() {
         <div className="home__jumbotron__bg__wrapper">
           <img
             className="home__jumbotron__bg__img"
-            src="src\img\jumbotron__bg.png"
+            src={jumbotron__bg}
             alt="bg image"
           />
         </div>
@@ -42,7 +47,7 @@ function App() {
               </a>
             </div>
             <div className="home__jumbotron__content__right">
-              <img src="src\img\jumbotron__mobile.png" alt="mobile" />
+              <img src={jumbotron__mobile} alt="mobile" />
             </div>
           </div>
         </div>
@@ -189,20 +194,20 @@ function App() {
       </section>
       <section id="app" className="text__section">
         <div className="text__section__wrapper">
-          <img src="src\img\text__section__bg.png" alt="bg__text__section" />
+          <img src={text__section__bg} alt="bg__text__section" />
           <div className="text__section__wrapper__overlay">
-          <div className="text__section__content">
-            <h2 className="text__section__content__heading">
-              Introducing Picode Landing Page
-            </h2>
-            <div className="text__section__content__para">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-              illo quasi quas quod maiores quis!
+            <div className="text__section__content">
+              <h2 className="text__section__content__heading">
+                Introducing Picode Landing Page
+              </h2>
+              <div className="text__section__content__para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Eligendi illo quasi quas quod maiores quis!
+              </div>
+              <a href="" className="text__section__content__button">
+                Download App
+              </a>
             </div>
-            <a href="" className="text__section__content__button">
-              Download App
-            </a>
-          </div>
           </div>
         </div>
       </section>
@@ -222,7 +227,7 @@ function App() {
       </section>
       <footer className="footer__section">
         <div className="footer__section__bg">
-          <img src="src\img\footer.png" alt="footer" />
+          <img src={footer} alt="footer" />
         </div>
         <div className="footer__section__content">
           <div className="footer__section__newsletter">
