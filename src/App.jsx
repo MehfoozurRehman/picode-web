@@ -8,7 +8,59 @@ import text__section__bg from "./img/text__section__bg.png";
 function App() {
   return (
     <>
-      <div id="home" className="home__jumbotron__wrapper">
+      <div className="header">
+        <div className="header__wrapper">
+          <div className="header__logo">
+            <img src={logo} alt="logo" className="header__logo__img" />
+          </div>
+          <div className="header__nav">
+            <a href="#" className="header__nav__link ">
+              Sign In
+            </a>
+            <a
+              href="#"
+              className="header__nav__link header__nav__link__primary"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="jumbotron__container">
+        <img
+          src={jumbotron__bg}
+          alt="jumbotron__bg"
+          className="jumbotron__container__img"
+        />
+        <div className="jumbotron__container__overlay">
+          <div className="jumbotron__container__overlay__content">
+            <div className="jumbotron__container__overlay__content__left">
+              <div className="jumbotron__container__overlay__content__left__heading">
+                Introducing Picode Landing Page
+              </div>
+              <div className="jumbotron__container__overlay__content__left__info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat nesciunt id nulla iste ab ea repudiandae tenetur
+                accusamus possimus in.
+              </div>
+              <a
+                href="#"
+                className="jumbotron__container__overlay__content__left__button"
+              >
+                Join as Partner
+              </a>
+            </div>
+            <div className="jumbotron__container__overlay__content__right">
+              <img
+                src={jumbotron__mobile}
+                alt="jumbotron__mobile"
+                className="jumbotron__container__overlay__content__right__img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div id="home" className="home__jumbotron__wrapper">
         <div className="home__navigation__wrapper">
           <div className="home__navigation__logo">
             <img src={logo} alt="logo" />
@@ -51,7 +103,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className="cards__container">
         <div className="card">
           <div className="card__img">
