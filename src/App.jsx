@@ -3,12 +3,12 @@ import jumbotron__bg from "./img/jumbotron__bg.png";
 import logo from "./img/logo.png";
 import footer from "./img/footer.png";
 import jumbotron__mobile from "./img/jumbotron__mobile.png";
-import text__section__bg from "./img/text__section__bg.png";
+import text__section__bg from "./img/text__section__bg1.png";
 
 function App() {
   return (
     <>
-      <div className="header">
+      <div id="home" className="header">
         <div className="header__wrapper">
           <div className="header__logo">
             <img src={logo} alt="logo" className="header__logo__img" />
@@ -246,19 +246,23 @@ function App() {
       </section>
       <section id="app" className="text__section">
         <div className="text__section__wrapper">
-          <img src={text__section__bg} alt="bg__text__section" />
           <div className="text__section__wrapper__overlay">
             <div className="text__section__content">
-              <h2 className="text__section__content__heading">
-                Introducing Picode Landing Page
-              </h2>
-              <div className="text__section__content__para">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi illo quasi quas quod maiores quis!
+              <div className="text__section__content__left">
+                <h2 className="text__section__content__heading">
+                  Introducing Picode Landing Page
+                </h2>
+                <div className="text__section__content__para">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Eligendi illo quasi quas quod maiores quis!
+                </div>
+                <a href="" className="text__section__content__button">
+                  Download App
+                </a>
               </div>
-              <a href="" className="text__section__content__button">
-                Download App
-              </a>
+              <div className="text__section__content__right">
+                <img src={text__section__bg} alt="bg__text__section" />
+              </div>
             </div>
           </div>
         </div>
@@ -281,42 +285,44 @@ function App() {
         <div className="footer__section__bg">
           <img src={footer} alt="footer" />
         </div>
-        <div className="footer__section__content">
-          <div className="footer__section__newsletter">
-            <h2 className="footer__section__heading">
-              Don't miss out. Stay update
-            </h2>
-            <form action="" className="footer__section__form">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="footer__section__email"
-              />
-              <input
-                type="submit"
-                placeholder="Subscribe"
-                className="footer__section__button"
-              />
-            </form>
-          </div>
-          <nav className="footer__section__menu">
-            <ul className="footer__section__list">
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#app">App</a>
-              </li>
-              <li>
-                <a href="#chat">Chat</a>
-              </li>
-              <li>
-                <a href="#home">Partner</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="footer__section__copyright">
-            &copy; All copyright are reserved.
+        <div className="footer__section__overlay">
+          <div className="footer__section__content">
+            <div className="footer__section__newsletter">
+              <h2 className="footer__section__heading">
+                Don't miss out. Stay updated
+              </h2>
+              <form action="" className="footer__section__form">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="footer__section__email"
+                />
+                <input
+                  type="submit"
+                  placeholder="Subscribe"
+                  className="footer__section__button"
+                />
+              </form>
+            </div>
+            <nav className="footer__section__menu">
+              <ul className="footer__section__list">
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#app">App</a>
+                </li>
+                <li>
+                  <a href="#chat">Chat</a>
+                </li>
+                <li>
+                  <a href="#home">Partner</a>
+                </li>
+              </ul>
+            </nav>
+            <div className="footer__section__copyright">
+              &copy; All copyright are reserved.
+            </div>
           </div>
         </div>
       </footer>

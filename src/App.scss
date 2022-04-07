@@ -8,6 +8,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
   font-size: 14px;
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -188,19 +189,19 @@ html {
 .text__section__wrapper {
   width: 100%;
   position: relative;
+  padding-bottom: 4rem;
+  height: 500px;
+  max-height: fit-content;
+
 }
-.text__section__wrapper img {
-  height: 100%;
-  max-height: 800px;
-  width: 100%;
-  object-fit: cover;
-}
+// .text__section__wrapper img {
+//   height: 100%;
+//   max-height: 800px;
+//   width: 100%;
+//   object-fit: cover;
+// }
 .text__section__wrapper__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -208,18 +209,22 @@ html {
 }
 .text__section__content {
   display: flex;
-  flex-direction: column;
+  // background-color: rgba(255, 0, 0, 0.425);
   height: 100%;
   width: 100%;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
   padding: 0 2rem;
   margin: 0em auto;
   max-width: 1440px;
 }
+.text__section__content__left {
+  width: 50%;
+}
 .text__section__content__heading {
-  font-size: 2rem;
+  font-size: 30px;
   width: 100%;
-  max-width: 400px;
+  
 }
 .text__section__content__para {
   margin: 1.5rem 0;
@@ -228,7 +233,7 @@ html {
 }
 .text__section__content__button {
   padding: 0.7rem 2rem;
-  font-size: 1.5rem;
+  font-size: 14px;
   background-color: #740e86;
   width: fit-content;
   color: white;
@@ -241,23 +246,33 @@ html {
   transform: translateY(-3px);
   box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
 }
+.text__section__content__right {
+  height: 600px;
+  position: absolute;
+  right: -430px;
+}
+.text__section__content__right img {
+  height: 100%;
+  object-fit: contain;
+}
 
 // ------------------------chat__section----------------------
 
 .chat__section {
-  height: 80vh;
+  height:fit-content;
   width: 100%;
   max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem 2rem;
+
 }
 .chat__section__container {
   background-color: #480c71;
   border-radius: 20px;
-  height: 65%;
+  height: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -295,30 +310,43 @@ html {
 // -----------------footer--section---------------------------
 
 .footer__section {
-  height: 60vh;
+  
+  height: 70vh;
   width: 100%;
   position: relative;
+  max-height: 700px;
+
 }
 .footer__section__bg {
   height: 100%;
   width: 100%;
+  max-height: fit-content;
+  
 }
 .footer__section__bg img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.footer__section__content {
+.footer__section__overlay{
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
+  // background-color: #ff00009d;
+}
+.footer__section__content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   z-index: 99;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
+  max-width: 1440px;
+  // max-height: fit-content;
 }
 .footer__section__newsletter {
   justify-content: center;
@@ -369,6 +397,7 @@ html {
   transform: translateY(-3px);
   box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 16%);
 }
+
 .footer__section__menu {
   width: 25%;
 }
@@ -410,9 +439,7 @@ html {
     align-items: center;
     width: 100%;
   }
-  .home__jumbotron__content__right img {
-    height: 520px;
-  }
+ 
   .cards__container {
     gap: 1rem;
     padding: 2rem 0;
@@ -420,15 +447,23 @@ html {
   .card {
     flex: 0 1 350px;
   }
-  .text__section__content {
-    width: 50%;
+  .text__section__content__right{
+    height:50%;
   }
+  .text__section__content__right img {
+    object-fit: contain;
+    height: 100%;
+  }
+  // .text__section__content {
+  //   width: 50%;
+  // }
   .cards__container {
     height: fit-content;
   }
   .text__section__wrapper img {
     object-fit: contain;
   }
+  
 }
 @media (max-width: 700px) {
   // body{
@@ -480,9 +515,6 @@ html {
   .home__jumbotron__content__left__para {
     width: 100%;
   }
-  .text__section {
-    height: 30vh;
-  }
   .chat__section {
     height: 50vh;
   }
@@ -498,16 +530,26 @@ html {
   .home__navigation__wrapper {
     flex-direction: column;
   }
-  .text__section__wrapper {
-    height: 35vh;
+  .text__section__content{
     background-color: #e4e4e4;
+
   }
-  .text__section__wrapper img {
-    display: none;
+  .text__section__content__left *{
+    text-align: center;
   }
-  .text__section__content {
+  .text__section__content__left {
     width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
+  .text__section__content__button{
+    margin: 0 auto;
+    
+  }
+
   .footer__section__menu {
     height: 30%;
   }
@@ -658,7 +700,7 @@ html {
   }
   .jumbotron__container__img {
     width: 250%;
-    height: 1000px;
+    height: 800px;
     margin-left: -75%;
   }
   .jumbotron__container__overlay__content {
